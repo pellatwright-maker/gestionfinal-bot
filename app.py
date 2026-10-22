@@ -1,12 +1,6 @@
-from flask import Flask
-import threading
-
-app_flask = Flask(__name__)
-@app_flask.route('/')
+# Pour Render Web Service
+flask_app = Flask(__name__)
+@flask_app.route('/')
 def home():
-    return "Bot est en ligne H24"
-
-def run_flask():
-    app_flask.run(host='0.0.0.0', port=10000)
-
-threading.Thread(target=run_flask).start()
+    return "Bot Gestionfinal en ligne H24"
+app = flask_app
